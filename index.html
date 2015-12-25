@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport"
+	content="initial-scale=1.0,width=device-width,user-scalable=0" />
+<meta charset="UTF-8">
+<title>:: My App ::</title>
+<link href="styles.css" rel="stylesheet" />
+<!--[if lt IE 9]>
+   <script>
+      document.createElement('header');
+      document.createElement('nav');
+      document.createElement('section');
+      document.createElement('article');
+      document.createElement('aside');
+      document.createElement('footer');
+   </script>
+<![endif]-->
+</head>
+<body>
+	<section class="container">
+		<!-- Navigation, enables only in mobile -->
+		<nav class="show-mobile nav">
+			<button onclick="mobileNav();" class="subnav"></button>
+			<button onclick="openForm();" class="addBtnwt"></button>
+		</nav>
+		<!-- Data grid header  -->
+		<header class="table table-header">
+			<ul>
+				<li>First Name</li>
+				<li>Last Name</li>
+				<li>ZIP</li>
+				<li>Date</li>
+				<li>Points</li>
+				<li></li>
+			</ul>
+		</header>
+		<!-- Data will bind here  -->
+		<article id="datawpr" class="article">
+			<div class="table table-body" id="bindData"></div>
+			<div id="loader" class="none centeralign">
+				<img src="images/loader.gif" alt="Loading Please wait" />
+			</div>
+			<div id="noRecords" class="none centeralign">No New Records To
+				Display From Database.</div>
+		</article>
+		<!-- Data add form  -->
+		<div class="table table-ediatable" id="tableEdiatable">
+			<ul>
+				<li><label class="show-mobile">First Name:</label> <input
+					type="text" id="firstName" value="test" placeholder="first name" /></li>
+				<li><label class="show-mobile">Last Name:</label><input
+					type="text" id="lastName" value="test" placeholder="Last name" /></li>
+				<li><label class="show-mobile">Zip:</label><input type="text"
+					id="zip" value="566500" placeholder="Zip" /></li>
+				<li><label class="show-mobile">Birth date:</label><input
+					type="text" id="birtday" value="02/08/1988"
+					placeholder="Birth date" /></li>
+				<li><label class="show-mobile">Points:</label><input
+					type="text" id="points" value="" placeholder="Points" /></li>
+				<li><button onclick="add();" class="addBtn"></button>
+					<button onclick="closePop();" class="closeBtn show-mobile">X</button>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<script src="js/app.js"></script>
+</body>
+</html>

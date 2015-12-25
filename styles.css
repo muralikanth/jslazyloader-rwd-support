@@ -1,0 +1,80 @@
+/*Global reset for margins and paddings*/
+*{margin:0; padding:0}
+/*declaring HTML5 elements for IE8*/
+section, article, aside, footer, header, nav, hgroup {
+  display:block;
+}
+
+/*General styles*/
+button{cursor:pointer}
+body{font-size:0.9em; font-family:arial}
+ul, ul li{list-style:none;}
+.none{display:none;}
+.centeralign{text-align:center;}
+.show-mobile{display:none;} 
+
+/*class based styles*/
+.container{max-width:800px; margin:auto; *width:800px;}
+
+/*creating table structure*/
+.table{display:table; width:100%}
+.table ul{display:table-row;}
+.table ul li{display:table-cell; text-align:center; padding:5px;}
+.table-header li{background:#6CCBEF; font-weight:bold}
+.table ul li:first-child{width:19%}
+.table ul li:nth-child(2){width:19%}
+.table ul li:nth-child(3){width:19%}
+.table ul li:nth-child(4){width:19%}
+.table ul li:nth-child(5){width:19%}
+.table ul li:last-child{width:5%}
+
+/*Data grid styles*/
+.table-body ul:nth-child(odd) li{background:#F3F3F3;}
+.table-body ul.even li{background:#F3F3F3;}/*For IE8*/
+.table-ediatable{border-top:3px solid #999;}
+.table-ediatable li{background:#f9f9f9;}
+.table input{width:88%; padding:10px 5%; border:1px solid #dadada; border-radius:4px; height: 14px;}
+.container .article{height:250px; overflow: auto; position:relative}
+.nav{ width:98%; padding:4px 1%; background:#666;}
+.addBtn, .addBtnwt, .subnav{background:url(images/addbtn.gif) no-repeat center center; background-color:transparent; width:25px !important; height:25px; border:none;}
+
+.addBtnwt{background:url(images/addbtn-white.gif) no-repeat center center; float:right; cursor:pointer}
+.nav{height:24px;}
+.subnav{background:url(images/menu.gif) no-repeat center center;}
+.closeBtn{position: absolute; top: -19px; right:-10px; background-color: #333; width: 25px; height: 25px; border: none; border-radius: 50%; color:#fff; line-height:25px; text-align:center;cursor:pointer}
+.table-body ul li button{background-color:transparent; width:25px; height:25px; border:none;font-family: verdana; font-weight:bold;}
+
+/* media for below to portrait mode */
+@media screen and (max-width:767px){
+	.show-mobile{display:block} 
+	.hide-mobile{display:none} 
+	.table-header{display:none}
+	.table-ediatable{width:100%; height:100%; position: fixed; background:rgba(0,0,0,0.5); z-index:999; display:none; top:0;}
+	.table-ediatable ul{position:absolute; top:10%;width:94%; margin-left:3%;}
+	.table-ediatable ul li{width:88% !important; padding:10px 10% 10px 2%; display:block; float:left;}
+	.table-ediatable ul li label{width:50%; float:left; text-align:left;}
+	.table-ediatable ul li input{width:45%; float:left; padding: 10px 2%;}
+	.addBtn{position: absolute; right: 1%; top: 16px;}
+	
+	/******data Table styles******/
+	.table-body, .table-body ul , .table-body ul li{display:block; width:100%;}
+	.table-body ul{float:left; position:relative;}
+	.table-body ul li{width:98% !important; padding:8px 1%; float:left;}
+	.table-body ul li:last-child, .table-ediatable ul li:last-child{padding:0;}
+	.table-body ul li span, .table-body ul li label{width:50%; float:left; text-align:left;}
+	.table-body ul li span{font-weight:bold;}
+	.table-body ul li label{color:#666;}
+	.table-body ul li:nth-child(odd), .table-ediatable ul li:nth-child(odd){background:#fff}
+	.table-body ul li:nth-child(even), .table-ediatable ul li:nth-child(even){background:#f9f9f9}
+	.table-body ul li:first-child, .table-ediatable ul li:first-child{background:#CBE8F3}
+	.table-body ul li button{position: absolute; top: 5px; right: 12px;}
+}
+
+/* media for mobile resolutions */
+@media screen and (max-width:360px){
+	.container .article{height:480px; }
+}
+
+@media screen and (max-width:320px){
+	.container .article{height:450px; }
+}
